@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+input, textarea {
+width:240px;
+background:#FFFFFF;
+box-sizing:border-box;
+border:1px solid #D4D4D4;
+}
+</style>
+<script>
+// ===================================
+// ScriptShow Web © 2000 - 2018
+// Experiments UI / UX
+// ===================================
+//<![CDATA[
+window.onerror=new Function("return true");
+ 
+function sendMail() {
+var link = "cf2021079@365.cesf.es"
++ "&subject=" + escape(document.getElementById('subject').value)
++ "&body=" + escape(document.getElementById('comment').value);
+ 
+window.location.href = "mailto:" +link;
+}
+//]]>
+</script>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/dispositivos.php" class="nav-link">Dispositivos</a></li>
+            <li class="nav-item"><a href="/archivos.php" class="nav-link">Archivos</a></li>
+            <li class="nav-item"><a href="/cuarentena.php" class="nav-link">Cuarentena</a></li>
+            <li class="nav-item"><a href="/contacto.html" class="nav-link active" aria-current="page">Contacto</a></li>
+          </ul>
+        </header>
+      </div>
+      <div class="px-5 py-5 my-5 text-left">
+<h1 class="h3 mb-3 fw-normal">Contacta con nosotros:</h1><br>
+<div class="form-floating">
+<input type="text" class="form-control" id="subject" placeholder="Asunto"><br>
+</div>
+<div class="form-floating">
+<textarea class="form-control" id="comment" placeholder="Comentario"></textarea><br>
+</div>
+<input class="w-100 btn btn-lg btn-primary" type="button" value="Enviar" onclick="sendMail(); return false">
+</div>
+</body>
+</html>
