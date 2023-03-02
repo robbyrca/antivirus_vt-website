@@ -44,24 +44,24 @@
         $sql="select * from usuarios where user='".$log."' and pass='".$pas."'";
 
         //echo $sql;
-        $consulta = $db->prepare($sql);
+       // $consulta = $db->prepare($sql);
        //preparar la execucio
        //$consulta = mysql_query ($sql, $db);
 
       //mostrar num de registres
        //$nfilas = mysql_num_rows($consulta);
-        $consulta->execute();
-        
+        $count = $db->exec($sql);
+        echo $count;
       //comprobar si existeixen registres
-      if (!$consulta->execute()){
-          echo "Usuario no v&aacute;lido";
+      if ($count!=0){
+          //echo "Usuario v&aacute;lido";
+          echo "<br>1. <a href='alta.php'>Alta</a>";
+          echo "<br>2. <a href='baja.php'>Baja</a>";
+          echo "<br>3. <a href='consulta.php'>Consulta</a>";
+          echo "<br>4. <a href='modifica2.php'>Modifica</a>";
+          echo "<br><br><form><a href='login_form.html'/><input type='button' value='SORTIR'></a>";
       }else{
-            //echo "Usuario v&aacute;lido";
-            echo "<br>1. <a href='alta.php'>Alta</a>";
-            echo "<br>2. <a href='baja.php'>Baja</a>";
-            echo "<br>3. <a href='consulta.php'>Consulta</a>";
-            echo "<br>4. <a href='modifica2.php'>Modifica</a>";
-            echo "<br><br><form><a href='login_form.html'/><input type='button' value='SORTIR'></a>";
+            echo "Usuario no v&aacute;lido";
         }
     }
     echo ("6");
