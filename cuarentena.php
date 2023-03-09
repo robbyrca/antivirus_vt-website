@@ -16,15 +16,19 @@ echo "
 </head>
 <body>
     <div class='container'>
-        <header class='d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom'>
-          <ul class='nav nav-pills'>
-            <li class='nav-item'><a href='/home.html' class='nav-link'>Home</a></li>
-            <li class='nav-item'><a href='/dispositivos.php' class='nav-link'>Dispositivos</a></li>
-            <li class='nav-item'><a href='/archivos.php' class='nav-link'>Archivos</a></li>
-            <li class='nav-item'><a href='/cuarentena.html' class='nav-link active' aria-current='page'>Cuarentena</a></li>
-            <li class='nav-item'><a href='/contacto.html' class='nav-link'>Contacto</a></li>
-          </ul>
-        </header>
+    <header class='d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
+    <ul class='nav col-20 nav-pills'>
+      <li class='nav-item'><a href='/home.html' class='nav-link'>Home</a></li>
+      <li class='nav-item'><a href='/dispositivos.php' class='nav-link'>Dispositivos</a></li>
+      <li class='nav-item'><a href='/archivos.php' class='nav-link'>Archivos</a></li>
+      <li class='nav-item'><a href='/cuarentena.php' class='nav-link active' aria-current='page'>Cuarentena</a></li>
+      <li class='nav-item'><a href='/contacto.html' class='nav-link'>Contacto</a></li>
+    </ul>
+    <div class='col-md-0 text-end'>
+      <button type='button' class='btn btn-outline-primary me-2'>Login</button>
+      <button type='button' class='btn btn-primary'>Sign-up</button>
+    </div>
+  </header>
       </div>";
 
 try {

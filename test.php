@@ -44,31 +44,30 @@
     //comprovem si venim del buto enviar
     if (isset($_REQUEST['enviar'])){
         //prepar query
-        $sql = "select * from usuarios where user='".$log."' and pass='".$pas."'";
-        //$sql="select * from usuarios where user";
-       // $consulta = $db->prepare($sql);
-       //preparar la execucio
-       //$consulta = mysql_query ($sql, $db);
-       
-      //mostrar num de registres
-       //$nfilas = mysql_num_rows($consulta);
-      //comprobar si existeixen registres
-      $nfilas=0;
-    foreach($db->query($sql) as $result){
-        if ($result) $nfilas++;
-    }
-    $dbh = null;
-      print  ($nfilas);
-      print_r($result[user]);
-      if ($nfilas!=0){
-          //echo "Usuario v&aacute;lido";
-          echo "<br>1. <a href='alta.php'>Alta</a>";
-          echo "<br>2. <a href='baja.php'>Baja</a>";
-          echo "<br>3. <a href='consulta.php'>Consulta</a>";
-          echo "<br>4. <a href='modifica2.php'>Modifica</a>";
-          echo "<br><br><form><a href='login.php'/><input type='button' value='SORTIR'></a>";
-      }else{
+        $sql = "select role from usuarios where user='".$log."' and pass='".$pas."'";
+        $nfilas=0;
+        foreach($db->query($sql) as $result){
+            if ($result) $nfilas++;
+        }
+        $dbh = null;
+        print  ($nfilas);
+        print_r($result);
+        if ($nfilas!=0){
+            if($result[0]=='admin'){
+                print('You are admin');
+                echo "<br><br><form><a href='login.php'/><input type='button' value='SORTIR'></a>";
+            }else{
+                print ('You are basic');
+                //echo "Usuario v&aacute;lido";
+                #echo "<br>1. <a href='alta.php'>Alta</a>";
+                #echo "<br>2. <a href='baja.php'>Baja</a>";
+                #echo "<br>3. <a href='consulta.php'>Consulta</a>";
+                #echo "<br>4. <a href='modifica2.php'>Modifica</a>";
+                echo "<br><br><form><a href='login.php'/><input type='button' value='SORTIR'></a>";
+            }
+        }else{
             echo " Usuario no v&aacute;lido";
+            echo "<br><br><form><a href='login.php'/><input type='button' value='SORTIR'></a>";
         }
     }
     
