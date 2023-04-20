@@ -63,11 +63,11 @@
     <form action="test.php" method="post" data-bitwarden-watching="1">
         <h1 class="h3 mb-3 fw-normal">Benvigut/da</h1>
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="login">
+            <input required type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="login">
             <label for="floatingInput"></label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="pass">
+            <input required type="password" class="form-control" id="floatingPassword" placeholder="Password" name="pass">
             <label for="floatingPassword"></label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit" value="ENVIAR" NAME="enviar">Log In</button>
