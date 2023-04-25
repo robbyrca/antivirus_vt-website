@@ -1,6 +1,6 @@
 <?php
 session_start();
-// if (($_SESSION['valido']!=1) || (!isset($_SESSION['valido']))) 
+ if (($_SESSION['valido']!=1) || (!isset($_SESSION['valido']))) 
  header('Location: ../login.php');
 ?>
 <!doctype html>
