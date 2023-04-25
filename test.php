@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $user = "robbyrca";
     $password = "QWEqwe123!";
     $database = "intranet";
@@ -50,14 +50,13 @@
             if ($result) $nfilas++;
         }
         $dbh = null;
-        print  ($nfilas);
-        print_r($result);
         if ($nfilas!=0){
+	   $_SESSION['valido']=1;
             if($result[0]=='admin'){
-                print('You are admin');
-                echo "<br><br><form><a href='login.php'/><input type='button' value='SORTIR'></a>";
+		header("Location: dashboard/");
+//             echo "<br><br><form><a href='login.php'/><input type='button' value='SORTIR'></a>";
             }else{
-                print ('You are basic');
+                print ('Bienvenido!');
                 //echo "Usuario v&aacute;lido";
                 #echo "<br>1. <a href='alta.php'>Alta</a>";
                 #echo "<br>2. <a href='baja.php'>Baja</a>";

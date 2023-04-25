@@ -18,7 +18,7 @@ echo "
     <div class='container'>
     <header class='d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
     <ul class='nav col-20 nav-pills'>
-      <li class='nav-item'><a href='/home.html' class='nav-link'>Home</a></li>
+      <li class='nav-item'><a href='/' class='nav-link'>Home</a></li>
       <li class='nav-item'><a href='/dispositivos.php' class='nav-link active' aria-current='page'>Dispositivos</a></li>
       <li class='nav-item'><a href='/archivos.php' class='nav-link'>Archivos</a></li>
       <li class='nav-item'><a href='/cuarentena.php' class='nav-link'>Cuarentena</a></li>
@@ -37,7 +37,7 @@ try {
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>DISPOSITIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
   foreach($db->query("SELECT * FROM $table") as $row) {
-   echo "<li>" . $row['mountpoint'] . " | " . $row['content'] . " | <a href='/archivos/". $row['filename'] . "'>descargar</a></li>";
+   echo "<li>" . $row['id_usb'] . " | " . $row['tamaño'];
    }
   echo "</ol></div>";
 } catch (PDOException $e) {
