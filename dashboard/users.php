@@ -5,7 +5,7 @@ session_start();
 
 $user = "robbyrca";
 $password = "QWEqwe123!";
-$database = "intranet";
+$database = "antivirus";
 $table = "usuarios";
 ?>
 <!doctype html>
