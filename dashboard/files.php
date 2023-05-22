@@ -1,7 +1,12 @@
 <?php
 session_start();
  if (($_SESSION['valido']!=1) || (!isset($_SESSION['valido']))) 
- header('Location: ../sign-in.html');
+  header('Location: ../sign-in.html');
+
+$user = "robbyrca";
+$password = "QWEqwe123!";
+$database = "antivirus";
+$table = "archivos";
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -240,6 +245,21 @@ session_start();
         <div class="btn-toolbar mb-2 mb-md-0">
         </div>
       </div>
+      <?php
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "
+  <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
+  echo"<div class='px-5 py-0 my-5 text-left'><ol>";
+  foreach($db->query("SELECT * FROM $table") as $row) {
+   echo "<li>" . $row['path'] . " | " . $row['filename'] . " | <a href=path". $row['filename'] . ">descargar</a></li>";
+   }
+  echo "</ol></div>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+      ?>
     </main>
   </div>
 </div>
