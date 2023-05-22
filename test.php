@@ -41,6 +41,7 @@
 		header("Location: dashboard/");
             }else{
                 print ('Bienvenido!');
+                header("Location: dashboardbasic/");
                 echo "<br><br><form><a href='sign-in.html'/><input type='button' value='SORTIR'></a>";
             }
         }else{
