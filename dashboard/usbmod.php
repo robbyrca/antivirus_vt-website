@@ -274,7 +274,7 @@ if(isset($_GET['userid'])){
                 echo"</tbody>";
             foreach($db->query("SELECT * FROM $table") as $row) {
                 echo "<tr><td>".$row['user']."</td>";
-                echo "<td><a href='usbmod.php?userid=".$row['id']."&identusb=".$identusb"'>Seleccionar</a></td></td>";
+                echo "<td><a href='usbmod.php?userid=".$row['id']."&identusb=".$identusb."'>Seleccionar</a></td></td>";
             }
             echo "</ol></div>";   
             ?>
