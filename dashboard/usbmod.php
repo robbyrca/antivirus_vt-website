@@ -14,8 +14,7 @@ if(isset($_GET['userid'])){
   $identusb=$_GET['identusb'];
 
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  print "UPDATE $table2 SET userFor=$identuser WHERE id=$identusb";
-  exit();
+  $db->query("UPDATE $table2 SET userFor=$identuser WHERE id=$identusb");
 }
 
 ?>
@@ -250,8 +249,8 @@ if(isset($_GET['userid'])){
       </div>
     </nav>
     <?php
-    $identusb=$_GET['id'];
     $idusb=$_GET['idusb'];
+    $identusb=$_GET['identusb'];
     ?>
     <main class='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
       <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
@@ -264,8 +263,6 @@ if(isset($_GET['userid'])){
     <div class="w-80 p-3">
         <h4>Canviar dueño</h4><br>
         <?php 
-                print $identusb;
-                exit();
             $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
             echo"<div class='table-responsive'>";
             echo"<table class='table table-striped table-sm'>";
