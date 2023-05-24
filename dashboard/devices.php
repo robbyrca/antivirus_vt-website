@@ -251,6 +251,14 @@ try {
   echo "
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
+  echo"<div class='table-responsive'>";
+        echo"<table class='table table-striped table-sm'>";
+        echo"<thead>";
+        echo"<tr>";
+        echo"<th scope='cole'> </th>";
+        echo"<th scope='cole'> </th>";
+        echo"</thead>";
+        echo"</tbody>";
   foreach($db->query("SELECT * FROM $table") as $row) {
     echo "<tr><td>".$row['id_usb'].$row['size']."</td>";
     echo "<td><a href='usbmod.php?user=".$row['id']."&idusb=".$row['id_usb']."'>Modificar</a></td></td>";
