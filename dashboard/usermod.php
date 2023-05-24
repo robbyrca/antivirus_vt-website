@@ -285,7 +285,6 @@ if(isset($_REQUEST['role'])){
               <a class="dropdown-item" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>">basic</a>
             </div>
           </div>
-        </form>
     </div>
     </div>
     </div>
