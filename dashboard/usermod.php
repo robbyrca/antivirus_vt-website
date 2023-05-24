@@ -14,8 +14,7 @@ if(isset($_GET['role'])){
   $id=$_GET['userid'];
 
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  echo "UPDATE $table SET role='$role' WHERE id=$id";
-  exit();
+  $db->query("UPDATE $table SET role='$role' WHERE id=$id");
 }
 
 ?>
