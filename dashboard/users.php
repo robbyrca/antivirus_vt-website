@@ -247,7 +247,7 @@ $table = "usuarios";
       </div>
       <?php
       try {
-        $db = new PDO("mysql:host=localhost;dbname=$database", $id, $user, $password);
+        $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
         echo"<div class='table-responsive'>";
         echo"<table class='table table-striped table-sm'>";
         echo"<thead>";
