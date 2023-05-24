@@ -278,7 +278,7 @@ if(isset($_REQUEST['role'])){
         <h4>Canviar Role</h4><br>
           <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sel·lecciona el role
+              Sel·lecciona el role
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>">admin</a>
