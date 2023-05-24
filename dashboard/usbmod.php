@@ -266,12 +266,12 @@ if(isset($_GET['userid'])){
             $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
             echo"<div class='table-responsive'>";
             echo"<table class='table table-striped table-sm'>";
-            echo"<thead>";
-            echo"<tr>";
-            echo"<th scope='cole'> </th>";
-            cho"<th scope='cole'> </th>";
-            echo"</thead>";
-            echo"</tbody>";
+                echo"<thead>";
+                echo"<tr>";
+                echo"<th scope='cole'> </th>";
+                echo"<th scope='cole'> </th>";
+                echo"</thead>";
+                echo"</tbody>";
             foreach($db->query("SELECT * FROM $table") as $row) {
                 echo "<tr><td>".$row['user']."</td>";
                 echo "<td><a href='usbmod.php?userid=".$row['id']."&identusb=".$identusb"'>Seleccionar</a></td></td>";

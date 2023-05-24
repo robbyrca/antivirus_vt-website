@@ -248,9 +248,6 @@ $table = "dispositivos";
       <?php
 try {
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  echo "
-  <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
-  echo"<div class='px-5 py-0 my-5 text-left'><ol>";
   echo"<div class='table-responsive'>";
         echo"<table class='table table-striped table-sm'>";
         echo"<thead>";
