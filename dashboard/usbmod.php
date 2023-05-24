@@ -257,7 +257,7 @@ if(isset($_GET['userid'])){
         <div class='btn-toolbar mb-2 mb-md-0'>
         </div>
       </div>
-    </main>"
+    </main>";
     ?>
     
     <main class="col-md-20 ms-sm-auto col-lg-10">
