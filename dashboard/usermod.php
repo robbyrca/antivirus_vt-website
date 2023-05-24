@@ -7,17 +7,7 @@ $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
 $table = "usuarios";
-$table2 = "dispositivos"
 
-$user=$_GET['user'];
-
-if (isset($_REQUEST['modifica'])) {
-  try {
-    $db = new PDO("mysql:host=localhost;dbname=$database", $id, $user, $password);
-    $db->query("SELECT id FROM $table WHERE user LIKE $user") as $user;
-    print("Id usu: "+$user);
-  }
-}
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -250,6 +240,7 @@ if (isset($_REQUEST['modifica'])) {
       </div>
     </nav>
     <?php
+    $user=$_GET['user'];
     echo"<main class='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
       <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
         <h1 class='h2'>".$user."</h1>
