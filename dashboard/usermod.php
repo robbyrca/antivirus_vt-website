@@ -276,15 +276,8 @@ if(isset($_REQUEST['role'])){
     <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
         <h4>Canviar Role</h4><br>
-          <div class="dropdown">
-            <a class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Sel·lecciona el role
-          </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>">admin</a>
-              <a class="dropdown-item" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>">basic</a>
-            </div>
-          </div>
+              <a class="btn btn-primary" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>" role="button">Set role admin</a>
+              <a class="btn btn-secondary" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>"role="button">basic</a>
     </div>
     </div>
     </div>
