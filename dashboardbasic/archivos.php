@@ -30,8 +30,7 @@ echo "
         <li class='nav-item'><a href='/contacto.html' class='nav-link'>Contacto</a></li>
       </ul>
       <div class='col-md-0 text-end'>"?>
-        <button type='button' onclick="location.href='/sign-in.html'" class='btn btn-outline-primary me-2'>Login</button>
-        <button type='button' onclick="location.href='/sign-in.html'" class='btn btn-primary'>Sign-up</button>
+        <button type="button" onclick="location.href='../sign-in.html'"class="btn btn-primary">Sign-out</button>
       <?php echo "</div>
     </header>
       </div>";
