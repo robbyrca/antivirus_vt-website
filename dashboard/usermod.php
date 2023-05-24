@@ -12,9 +12,9 @@ if(isset($_GET['role'])){
   $role=$_GET['role'];
   $usu=$_GET['user'];
   $id=$_GET['userid'];
-  echo "ROLA CAMBIADO";
+
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  $db->query("UPDATE $table SET role=$role WHERE id=$id");
+  echo "UPDATE $table SET role=$role WHERE id=$id";
 }
 
 ?>
