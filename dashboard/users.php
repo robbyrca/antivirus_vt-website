@@ -247,7 +247,7 @@ $table = "usuarios";
       </div>
       <?php
       try {
-        $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+        $db = new PDO("mysql:host=localhost;dbname=$database", $id, $user, $password);
         echo"<div class='table-responsive'>";
         echo"<table class='table table-striped table-sm'>";
         echo"<thead>";
@@ -258,7 +258,7 @@ $table = "usuarios";
         echo"</tbody>";
         foreach($db->query("SELECT * FROM $table") as $row) {
           echo "<tr><td>".$row['user']."</td>";
-          echo "<td><a href='usermod.php?user=".$row['user']."'>Modificar</a></td></td>";
+          echo "<td><a href='usermod.php?user=".$row['user']."&userid=".$row['id']"'>Modificar</a></td></td>";
         }
         echo "</ol></div>";
         } catch (PDOException $e) {

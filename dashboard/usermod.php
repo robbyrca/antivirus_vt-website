@@ -8,6 +8,14 @@ $password = "QWEqwe123!";
 $database = "antivirus";
 $table = "usuarios";
 
+if(isset($_REQUEST['role'])){
+  $role=$_GET['role'];
+  $usu=$_GET['user'];
+  $id=$_GET['userid'];
+  $db = new PDO("mysql:host=localhost;dbname=$database", $id, $user, $password, $role);
+  $db->query("UPDATE $table SET role=$role WHERE id=$id");
+}
+
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -241,6 +249,7 @@ $table = "usuarios";
     </nav>
     <?php
     $user=$_GET['user'];
+    $iduser=$_GET['userid'];
     echo"<main class='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
       <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
         <h1 class='h2'>".$user."</h1>
@@ -272,11 +281,10 @@ $table = "usuarios";
             Sel·lecciona el role
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item">admin</a>
-              <a class="dropdown-item">basic</a>
+              <a class="dropdown-item" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>">admin</a>
+              <a class="dropdown-item" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>">basic</a>
             </div>
           </div>
-          <br><input type="submit" class="btn btn-sm btn-outline-primary" name="modifica" value="modifica">
         </form>
     </div>
     </div>
