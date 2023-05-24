@@ -260,7 +260,7 @@ try {
         echo"</thead>";
         echo"</tbody>";
   foreach($db->query("SELECT * FROM $table") as $row) {
-    echo "<tr><td>".$row['id_usb']"</td><td>".$row['size']."</td>";
+    echo "<tr><td>".$row['id_usb']."</td><td>".$row['size']."</td>";
     echo "<td><a href='usbmod.php?user=".$row['id']."&idusb=".$row['id_usb']."'>Modificar</a></td></td>";
    }
   echo "</ol></div>";
