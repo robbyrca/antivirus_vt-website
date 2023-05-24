@@ -17,7 +17,7 @@ $table = "dispositivos";
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.111.3">
-    <title>Usuaris</title>
+    <title>Dispositivos</title>
 
     
 
@@ -252,7 +252,8 @@ try {
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
   foreach($db->query("SELECT * FROM $table") as $row) {
-   echo "<li>" . $row['path'] . " | " . $row['filename'] . " | <a href=path". $row['filename'] . ">descargar</a></li>";
+    echo "<tr><td>".$row['id_usb'].$row['size']."</td>";
+    echo "<td><a href='usbmod.php?user=".$row['id']."&idusb=".$row['id_usb']."'>Modificar</a></td></td>";
    }
   echo "</ol></div>";
 } catch (PDOException $e) {
