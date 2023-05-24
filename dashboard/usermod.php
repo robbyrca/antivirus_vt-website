@@ -8,7 +8,7 @@ $password = "QWEqwe123!";
 $database = "antivirus";
 $table = "usuarios";
 
-if(isset($:GET['role'])){
+if(isset($_GET['role'])){
   $role=$_GET['role'];
   $usu=$_GET['user'];
   $id=$_GET['userid'];
