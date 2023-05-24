@@ -276,8 +276,8 @@ if(isset($_REQUEST['role'])){
     <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
         <h4>Canviar Role</h4><br>
-              <a class="btn btn-primary" href="usermod.php?role=admin&user='<?= $user;?>'&userid='<?= $iduser;?>'" role="button">Set role admin</a>
-              <a class="btn btn-secondary" href="usermod.php?role=basic&user='<?= $user;?>'&userid='<?= $iduser;?>'"role="button">Set role basic</a>
+              <a class="btn btn-primary" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>" role="button">Set role admin</a>
+              <a class="btn btn-secondary" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>"role="button">Set role basic</a>
     </div>
     </div>
     </div>
