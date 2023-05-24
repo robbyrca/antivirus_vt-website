@@ -6,7 +6,7 @@ session_start();
 $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
-$table = "archivos";
+$table = "dispositivos";
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -197,7 +197,7 @@ $table = "archivos";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="devices.php">
               <span data-feather="layers" class="align-text-bottom"></span>
               Dispositius
             </a>
@@ -241,7 +241,7 @@ $table = "archivos";
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Usuaris</h1>
+        <h1 class="h2">Dispositius</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
         </div>
       </div>
@@ -252,8 +252,7 @@ try {
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
   foreach($db->query("SELECT * FROM $table") as $row) {
-    echo "<tr><td>".$row['id_usb'].$row['size']."</td>";
-    echo "<td><a href='usbmod.php?user=".$row['id']."&idusb=".$row['id_usb']."'>Modificar</a></td></td>";
+   echo "<li>" . $row['path'] . " | " . $row['filename'] . " | <a href=path". $row['filename'] . ">descargar</a></li>";
    }
   echo "</ol></div>";
 } catch (PDOException $e) {
