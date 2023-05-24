@@ -258,7 +258,7 @@ $table = "usuarios";
         echo"</tbody>";
         foreach($db->query("SELECT * FROM $table") as $row) {
           echo "<tr><td>".$row['user']."</td>";
-          echo "<td><a href='usermod.php?user=".$row['user']."&userid=".$row['id']'">Modificar</a></td></td>";
+          echo "<td><a href='usermod.php?user=".$row['user']."&userid=".$row['id']."'>Modificar</a></td></td>";
         }
         echo "</ol></div>";
         } catch (PDOException $e) {
