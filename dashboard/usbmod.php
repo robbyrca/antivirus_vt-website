@@ -14,7 +14,7 @@ if(isset($_GET['userid'])){
   $identusb=$_GET['identusb'];
 
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  $db->query("UPDATE $table2 SET userFor='$identuser' WHERE id=$identusb");
+  $db->query("UPDATE $table2 SET userFor=$identuser WHERE id=$identusb");
 }
 
 ?>
