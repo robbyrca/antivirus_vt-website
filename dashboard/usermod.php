@@ -263,6 +263,8 @@ $table = "usuarios";
     </div>
     </div>
     </div>
+    </main>
+    <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
         <h4>Canviar Role</h4><br>
           <div class="dropdown">
