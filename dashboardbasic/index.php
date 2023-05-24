@@ -1,3 +1,8 @@
+<?php
+session_start();
+ if (($_SESSION['valido']!=1) || (!isset($_SESSION['valido']))) 
+ header('Location: ../sign-in.html');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +23,7 @@
             <li class="nav-item"><a href="/contacto.html" class="nav-link">Contacto</a></li>
           </ul>
           <div class="col-md-0 text-end">
-            <button type="button" onclick="location.href='/sign-in.html'" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" onclick="location.href='/sign-in.html'"class="btn btn-primary">Sign-up</button>
+            <button type="button" onclick="location.href='../sign-in.html'"class="btn btn-primary">Sign-out</button>
           </div>
         </header>
       </div>

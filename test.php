@@ -23,9 +23,6 @@
     $pas = str_replace("=", "", $pas);
     $pas = str_replace("'", "", $pas);
 
-    if(isset($_REQUEST['volver3'])){
-        header("Location: alta.php");
-    }
     //comprovem si venim del buto enviar
     if (isset($_REQUEST['enviar'])){
         //prepar query
@@ -36,7 +33,7 @@
         }
         $dbh = null;
         if ($nfilas!=0){
-	   $_SESSION['valido']=1;
+	    $_SESSION['valido']=1;
             if($result[0]=='admin'){
 		header("Location: dashboard/");
             }else{

@@ -1,4 +1,8 @@
 <?php
+session_start();
+ if (($_SESSION['valido']!=1) || (!isset($_SESSION['valido']))) 
+ header('Location: ../sign-in.html');
+ 
 $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
