@@ -185,7 +185,7 @@ $table = "dispositivos";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="users.php">
+            <a class="nav-link" href="users.php">
               <span data-feather="users" class="align-text-bottom"></span>
               Usuaris
             </a>
@@ -197,7 +197,7 @@ $table = "dispositivos";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="devices.php">
+            <a class="nav-link active" href="devices.php">
               <span data-feather="layers" class="align-text-bottom"></span>
               Dispositius
             </a>
