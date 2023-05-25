@@ -252,7 +252,7 @@ try {
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
   foreach($db->query("SELECT * FROM $table") as $row) {
-    echo "<li>" . $row['path'] . " | " . $row['file'] . " | <a href='".$row['path']. $row['file'] . "'>descargar</a></li>";
+    echo "<li>" . $row['path'] . " | " . $row['filename'] . " | <a href='".$row['path']. $row['filename'] . "'>descargar</a></li>";
    }
   echo "</ol></div>";
 } catch (PDOException $e) {
