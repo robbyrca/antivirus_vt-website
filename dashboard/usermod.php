@@ -20,7 +20,7 @@ if(isset($_GET['role'])){
 if(isset($_REQUEST['password'])){
   $new=$_REQUEST['new'];
   $renew=$_REQUEST['renew'];
-  if $new == $renew{
+  if ($new == $renew){
     $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
     $db->query("UPDATE $table SET pass='$new' WHERE id=$_SESSION['iduser']");
   }
