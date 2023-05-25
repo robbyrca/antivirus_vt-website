@@ -212,9 +212,9 @@ $table = "usuarios";
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="logsusb.php">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Current month
+              Logs USB
             </a>
           </li>
           <li class="nav-item">
