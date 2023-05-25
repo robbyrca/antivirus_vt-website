@@ -276,7 +276,7 @@ if(isset($_REQUEST['password'])){
     <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
         <h4>Nova contrasenya</h4><br>
-        <form action=".php" method="post">
+        <form action="usermod.php" method="post">
             <div class="row">
                     <div class="col-sm-3"><input type="password" class="form-control" placeholder="Nova contrasenya" name="new"></div>
                     <div class="col-sm-3"><input type="password" class="form-control" placeholder="Reescriu la nova contrasenya" name="renew"></div>
