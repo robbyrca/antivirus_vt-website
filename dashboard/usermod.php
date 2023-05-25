@@ -17,6 +17,15 @@ if(isset($_GET['role'])){
   $db->query("UPDATE $table SET role='$role' WHERE id=$id");
 }
 
+if(isset($_REQUEST['password'])){
+  $new=$_REQUEST['new'];
+  $renew=$_REQUEST['renew'];
+  if $new == $renew{
+    $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+    $db->query("UPDATE $table SET pass='$new' WHERE id=$_SESSION['iduser']");
+  }
+}
+
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -250,7 +259,7 @@ if(isset($_GET['role'])){
     </nav>
     <?php
     $user=$_GET['user'];
-    $iduser=$_GET['userid'];
+    $_SESSION['iduser']=$_GET['userid'];
     echo"<main class='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
       <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
         <h1 class='h2'>".$user."</h1>
@@ -268,7 +277,7 @@ if(isset($_GET['role'])){
                     <div class="col-sm-3"><input type="password" class="form-control" placeholder="Nova contrasenya" name="new"></div>
                     <div class="col-sm-3"><input type="password" class="form-control" placeholder="Reescriu la nova contrasenya" name="renew"></div>
             </div>
-            <br><input type="submit" class="btn btn-sm btn-outline-primary" name="modificar" value="Canviar contrasenya">
+            <br><input type="submit" class="btn btn-sm btn-outline-primary" name="password" value="Canviar contrasenya">
         </form>
     </div>
     </div>
@@ -277,8 +286,8 @@ if(isset($_GET['role'])){
     <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
         <h4>Canviar Role</h4><br>
-              <a class="btn btn-primary" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>" role="button">Set role admin</a>
-              <a class="btn btn-secondary" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>"role="button">Set role basic</a>
+              <a class="btn btn-primary" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $_SESSION['iduser'];?>" role="button">Set role admin</a>
+              <a class="btn btn-secondary" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $_SESSION['iduser'];?>"role="button">Set role basic</a>
     </div>
     </div>
     </div>
