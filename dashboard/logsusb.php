@@ -218,21 +218,9 @@ $table = "archivos";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="logspy.php">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Year-end sale
+              Logs ANTIVIRUS
             </a>
           </li>
         </ul>
@@ -245,7 +233,7 @@ $table = "archivos";
         <div class="btn-toolbar mb-2 mb-md-0">
         </div>
       </div>
-        <iframe src="../antivirus/logs/usb.log"></iframe>
+        <iframe width="500" height="300" src="../antivirus/logs/usb.log"></iframe>
     </main>
   </div>
 </div>

@@ -6,7 +6,7 @@ session_start();
 $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
-$table = "cuarentena";
+$table = "archivos";
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -191,7 +191,7 @@ $table = "cuarentena";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="cuarentena.php">
+            <a class="nav-link" href="cuarentena.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Cuarentena
             </a>
@@ -211,7 +211,7 @@ $table = "cuarentena";
           </a>
         </h6>
         <ul class="nav flex-column mb-2">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="logsusb.php">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Logs USB
@@ -229,25 +229,11 @@ $table = "cuarentena";
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Usuaris</h1>
+        <h1 class="h2">Logs ANTIVIRUS</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
         </div>
       </div>
-      <?php
-try {
-  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  echo "
-  <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
-  echo"<div class='px-5 py-0 my-5 text-left'><ol>";
-  foreach($db->query("SELECT * FROM $table") as $row) {
-    echo "<li>" . $row['path'] . " | " . $row['filename'] . " | <a href='".$row['path']. $row['filename'] . "'>descargar</a></li>";
-   }
-  echo "</ol></div>";
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
-      ?>
+        <iframe width="500" height="300" src="../antivirus/logs/antivirus.log"></iframe>
     </main>
   </div>
 </div>
