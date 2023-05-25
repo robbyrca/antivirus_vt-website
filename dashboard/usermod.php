@@ -25,7 +25,7 @@ if(isset($_REQUEST['password'])){
     $new = str_replace("'", "", $new);
     $hash=md5($new);
     $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-    echo "UPDATE ".$table." SET pass='".$hash."' WHERE id=".$_SESSION['iduser'];
+    db->query("UPDATE ".$table." SET pass='".$hash."' WHERE id=".$_SESSION['iduser']);
     exit();
   }
 }
@@ -265,6 +265,7 @@ if(isset($_REQUEST['password'])){
     $user=$_GET['user'];
     $iduser=$_GET['userid'];
     $_SESSION['iduser']=$iduser;
+  
     echo"<main class='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
       <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
         <h1 class='h2'>".$user."</h1>
