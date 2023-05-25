@@ -179,25 +179,25 @@ $table = "cuarentena";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="files.php">
               <span data-feather="file" class="align-text-bottom"></span>
               Arxius
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="users.php">
+            <a class="nav-link" href="users.php">
               <span data-feather="users" class="align-text-bottom"></span>
               Usuaris
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link active" href="cuarentena.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Cuarentena
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="devices.php">
               <span data-feather="layers" class="align-text-bottom"></span>
               Dispositius
             </a>
@@ -252,7 +252,7 @@ try {
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
   foreach($db->query("SELECT * FROM $table") as $row) {
-    echo "<li>" . $row['path'] . " | " . $row['file'] . " | <a href='"$row['path']. $row['file'] . "'>descargar</a></li>";
+    echo "<li>" . $row['path'] . " | " . $row['file'] . " | <a href='".$row['path']. $row['file'] . "'>descargar</a></li>";
    }
   echo "</ol></div>";
 } catch (PDOException $e) {
