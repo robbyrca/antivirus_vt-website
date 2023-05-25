@@ -21,8 +21,12 @@ if(isset($_REQUEST['password'])){
   $new=$_REQUEST['new'];
   $renew=$_REQUEST['renew'];
   if ($new == $renew){
+    $new = str_replace("=", "", $new);
+    $new = str_replace("'", "", $new);
+    $hash=md5($new);
     $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-    $db->query("UPDATE $table SET pass='$new' WHERE id=$_SESSION['iduser']");
+    print("UPDATE $table SET pass='$hash' WHERE id=$_SESSION['iduser']");
+    exit();
   }
 }
 
