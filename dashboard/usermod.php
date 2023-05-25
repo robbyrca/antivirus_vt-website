@@ -15,7 +15,9 @@ if(isset($_GET['role'])){
 
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
   $db->query("UPDATE $table SET role='$role' WHERE id=$id");
+  header('Location: users.php');
 }
+
 
 if(isset($_REQUEST['password'])){
   $new=$_REQUEST['new'];
@@ -26,6 +28,7 @@ if(isset($_REQUEST['password'])){
     $hash=md5($new);
     $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
     $db->query("UPDATE ".$table." SET pass='".$hash."' WHERE id=".$_SESSION['iduser']);
+    header('Location: users.php');
   }
 }
 
