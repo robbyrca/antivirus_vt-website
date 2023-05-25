@@ -174,7 +174,7 @@ session_start();
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="files.php">
               <span data-feather="file" class="align-text-bottom"></span>
               Arxius
             </a>
@@ -186,7 +186,7 @@ session_start();
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="cuarentena.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Cuarentena
             </a>
