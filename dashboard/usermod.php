@@ -25,7 +25,7 @@ if(isset($_REQUEST['password'])){
     $new = str_replace("'", "", $new);
     $hash=md5($new);
     $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-    print("UPDATE $table SET pass='$hash' WHERE id=$_SESSION['iduser']");
+    echo "UPDATE ".$table." SET pass='".$hash."' WHERE id=".$_SESSION['iduser'];
     exit();
   }
 }
