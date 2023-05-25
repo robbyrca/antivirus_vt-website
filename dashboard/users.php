@@ -179,7 +179,7 @@ $table = "usuarios";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="files.php">
               <span data-feather="file" class="align-text-bottom"></span>
               Arxius
             </a>
@@ -191,13 +191,13 @@ $table = "usuarios";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="cuarentena.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Cuarentena
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="devices.php">
               <span data-feather="layers" class="align-text-bottom"></span>
               Dispositius
             </a>
