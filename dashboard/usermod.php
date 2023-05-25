@@ -29,7 +29,7 @@ if(isset($_REQUEST['password'])){
     $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
     $db->query("UPDATE ".$table." SET pass='".$hash."' WHERE id=".$_SESSION['iduser']);
     header('Location: users.php');
-  }
+  }else print('ERROR');
 }
 
 ?>

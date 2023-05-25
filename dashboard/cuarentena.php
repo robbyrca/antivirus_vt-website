@@ -6,7 +6,7 @@ session_start();
 $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
-$table = "archivos";
+$table = "cuarentena";
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
