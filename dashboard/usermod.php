@@ -263,7 +263,8 @@ if(isset($_REQUEST['password'])){
     </nav>
     <?php
     $user=$_GET['user'];
-    $_SESSION['iduser']=$_GET['userid'];
+    $iduser=$_GET['userid'];
+    $_SESSION['iduser']=$iduser;
     echo"<main class='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
       <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
         <h1 class='h2'>".$user."</h1>
@@ -290,8 +291,8 @@ if(isset($_REQUEST['password'])){
     <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
         <h4>Canviar Role</h4><br>
-              <a class="btn btn-primary" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $_SESSION['iduser'];?>" role="button">Set role admin</a>
-              <a class="btn btn-secondary" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $_SESSION['iduser'];?>"role="button">Set role basic</a>
+              <a class="btn btn-primary" href="usermod.php?role=admin&user=<?= $user;?>&userid=<?= $iduser;?>" role="button">Set role admin</a>
+              <a class="btn btn-secondary" href="usermod.php?role=basic&user=<?= $user;?>&userid=<?= $iduser;?>"role="button">Set role basic</a>
     </div>
     </div>
     </div>
