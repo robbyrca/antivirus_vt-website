@@ -20,7 +20,6 @@ session_start();
             <li class="nav-item"><a href="/dispositivos.php" class="nav-link">Dispositivos</a></li>
             <li class="nav-item"><a href="/archivos.php" class="nav-link">Archivos</a></li>
             <li class="nav-item"><a href="/cuarentena.php" class="nav-link">Cuarentena</a></li>
-            <li class="nav-item"><a href="/contacto.html" class="nav-link">Contacto</a></li>
           </ul>
           <div class="col-md-0 text-end">
             <button type="button" onclick="location.href='../sign-in.html'"class="btn btn-primary">Sign-out</button>
@@ -49,17 +48,6 @@ session_start();
             <h3 class="fs-2">Archivos</h3>
             <p>Descarga los archivos que se han analizado favorablemente.</p>
             <a href="/archivos.php" class="icon-link d-inline-flex align-items-center">
-              Ir a la página
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-            </a>
-          </div>
-          <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-            </div>
-            <h3 class="fs-2">Contacto</h3>
-            <p><strong>Realizado por: Alex Dupont, Alex Pilar y Ruben Cuenca</strong></p>
-            <a href="/contacto.html" class="icon-link d-inline-flex align-items-center">
               Ir a la página
               <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
             </a>

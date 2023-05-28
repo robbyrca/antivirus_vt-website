@@ -54,7 +54,7 @@
         //confirmacion de alta
         $db->query($sql);
         echo "Usuario dado de ALTA";
-        echo "<br><form action='test.php' method='post'><input type='submit' name='volver2' value='TORNAR'>";
+        echo "<br><form action='sign-in.html' method='post'><input type='submit' name='volver2' value='TORNAR'>";
 
     }
 ?>
