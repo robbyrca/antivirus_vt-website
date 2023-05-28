@@ -16,10 +16,10 @@ session_start();
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <ul class="nav col-20 nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/dispositivos.php" class="nav-link">Dispositivos</a></li>
-            <li class="nav-item"><a href="/archivos.php" class="nav-link">Archivos</a></li>
-            <li class="nav-item"><a href="/cuarentena.php" class="nav-link">Cuarentena</a></li>
+            <li class="nav-item"><a href="index.php" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="dispositivos.php" class="nav-link">Dispositivos</a></li>
+            <li class="nav-item"><a href="archivos.php" class="nav-link">Archivos</a></li>
+            <li class="nav-item"><a href="cuarentena.php" class="nav-link">Cuarentena</a></li>
           </ul>
           <div class="col-md-0 text-end">
             <button type="button" onclick="location.href='../sign-in.html'"class="btn btn-primary">Sign-out</button>
