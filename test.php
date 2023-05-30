@@ -16,6 +16,7 @@
     //variable del formulario
     $log = $_REQUEST['login'];
     $pas = md5($_REQUEST['pass']);
+    $_SESSION['login']=$log;
     
     //eliminar igual del camp pass
     $log = str_replace("=", "", $log);

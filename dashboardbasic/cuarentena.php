@@ -6,7 +6,7 @@ session_start();
 $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
-$table = "cuarentena";
+$table = "archivos";
 
 echo "
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ try {
 </main>";
 echo "<div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>CUARENTENA</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
-  foreach($db->query("SELECT * FROM $table") as $row) {
+  foreach($db->query("SELECT * FROM $table WHERE malicioso = 1") as $row) {
    echo "<li>" . $row['path'] . " | " . $row['file'] . " | <a href='".$row['path']. $row['file'] . "'>descargar</a></li>";
    }
   echo "</ol></div>";

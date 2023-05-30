@@ -4,6 +4,8 @@ session_start();
  if (($_SESSION['valido']!=1) || (!isset($_SESSION['valido']))) 
  header('Location: ../sign-in.html');
 
+$user = $_GET['login'];
+
 $user = "robbyrca";
 $password = "QWEqwe123!";
 $database = "antivirus";
@@ -39,7 +41,7 @@ try {
   echo "
   <div class='px-5 py-0 my-5 text-left'><h2 class='pb-2 border-bottom '>ARCHIVOS</h2></div>";
   echo"<div class='px-5 py-0 my-5 text-left'><ol>";
-  foreach($db->query("SELECT * FROM $table") as $row) {
+  foreach($db->query("SELECT * FROM $table WHERE malicioso = 0") as $row) {
    echo "<li>" . $row['mountpoint'] . " | " . $row['content'] . " | <a href='/archivos/". $row['filename'] . "'>descargar</a></li>";
    }
   echo "</ol></div>";

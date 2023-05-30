@@ -261,7 +261,7 @@ if(isset($_GET['userid'])){
     </main>
     <main class="col-md-20 ms-sm-auto col-lg-10">
     <div class="w-80 p-3">
-        <h4>Canviar dueño</h4><br>
+        <h4>Cambiar dueño</h4><br>
         <?php 
             $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
             echo"<div class='table-responsive'>";
